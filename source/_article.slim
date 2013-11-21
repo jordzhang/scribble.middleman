@@ -1,0 +1,13 @@
+== partial 'includes/pages', {:locals =>{:article => article}}
+article.content
+  section.post
+    h1.upcase
+      .date ==article.date.strftime("%Y-%m-%d")
+      == article.title
+
+    == article.body
+
+    /== partial 'includes/signoff', {:locals =>{:article => article}}
+
+- if data['disqus']
+  == partial 'includes/disqus'
