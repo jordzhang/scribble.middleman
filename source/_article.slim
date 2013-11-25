@@ -7,7 +7,7 @@ article.content
 
     == article.body
 
-    /== partial 'includes/signoff', {:locals =>{:article => article}}
+    == partial 'includes/signoff', {:locals =>{:article => article}}
 
 - if data['disqus']
   == partial 'includes/disqus'

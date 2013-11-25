@@ -10,15 +10,5 @@ script src='/javascripts/basics.js' type='text/javascript'
 
 meta content='width=device-width, initial-scale=1.0, user-scalable=no' name='viewport'
 meta content='text/html; charset=utf-8' http-equiv='content-type'
-meta content="/images/og.png" property="og:image"
-
-- if @data.date
-  meta content=@data.url property='og:url'
-  meta content=@data.summary(120) property='og:description'
-  meta content="article" property="og:type"
-- else
-  meta content=data['site'].url property='og:url'
-  meta content=data['site'].description property='og:description'
-  meta content="blog" property="og:type"
 
 == partial 'includes/ga'

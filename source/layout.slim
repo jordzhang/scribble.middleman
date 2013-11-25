@@ -1,9 +1,10 @@
 - @data = current_page.data
-
+- @title = (@data.title.present? ? @data.title + " - " : "") + data.site.title
 html
   head
-    meta content=@data.title name='og:title'
-    title==@data.title
+    meta content=@title name='title'
+    meta content=@title property='og:title'
+    title==@title
     == partial 'includes/head'
   body
     == partial 'includes/header'
